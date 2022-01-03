@@ -1,15 +1,27 @@
 node tree-sitter
 ================
 
-[![Build Status](https://travis-ci.org/tree-sitter/node-tree-sitter.svg?branch=master)](https://travis-ci.org/tree-sitter/node-tree-sitter)
-[![Build status](https://ci.appveyor.com/api/projects/status/0pqlhnnk6i9rsakj/branch/master?svg=true)](https://ci.appveyor.com/project/maxbrunsfeld/node-tree-sitter/branch/master)
-
 Incremental parsers for node
+
+> My fork is supposed to play nice with VSCode as the [original repo](https://github.com/tree-sitter/node-tree-sitter)
+> uses an outdated V8 API.
+> It's expected that we'll fall behind by few commits.
+> Most prominent changes:
+> - Use New V8 API
+> - `vendor/tree-sitter` is now a subtree, merging in frozen code from [tree-sitter](https://github.com/tree-sitter/tree-sitter).
 
 ### Installation
 
+This will install the original version of the software
 ```sh
 npm install tree-sitter
+```
+
+If you intend to use this repo instead, go like this for your dependencies:
+```json
+{
+    "tree-sitter": "github:FoamScience/node-tree-sitter#master"
+}
 ```
 
 ### Usage
